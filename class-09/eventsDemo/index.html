@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvents</title>
+</head>
+<body>
+
+    <h1>
+        Demo
+    </h1>
+    <button id="btn-1">Clickable</button>
+    <p id="change">Old text</p>
+
+    <p id ="second">
+
+    </p>
+
+    <script>
+        'use strict';
+        //Mosue Events!
+        const btn = document.getElementById('btn-1');
+        btn.addEventListener('click', sayHi);
+
+        function sayHi(){
+            alert('Hi Class!')
+        }
+
+        const text = document.getElementById('change');
+        text.addEventListener('dblclick', changeText);
+        text.addEventListener('mouseover', giveText);
+
+        function changeText (){
+            text.textContent = 'New Text been genrated';
+        }
+
+        function giveText (){ 
+            let newText = document.getElementById('second');
+            newText.textContent = 'This text is generated when we mouse over it'
+        }
+    </script>
+</body>
+</html>
